@@ -1,12 +1,25 @@
 {
   "name": "@tsingwoong/clock-doctor-linux-arm64-gnu",
-  "version": "1.0.1",
-  "os": ["linux"],
-  "cpu": ["arm64"],
+  "version": "1.0.2",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm64"
+  ],
   "main": "clock-doctor.linux-arm64-gnu.node",
-  "files": ["clock-doctor.linux-arm64-gnu.node"],
+  "files": [
+    "clock-doctor.linux-arm64-gnu.node"
+  ],
   "description": "Template project for writing node package with napi-rs",
-  "keywords": ["napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
+  "keywords": [
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "node-addon",
+    "node-addon-api"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">= 10"
@@ -16,5 +29,7 @@
     "access": "public"
   },
   "repository": "git@github.com:tsingwong/clock-doctor.git",
-  "libc": ["glibc"]
+  "libc": [
+    "glibc"
+  ]
 }

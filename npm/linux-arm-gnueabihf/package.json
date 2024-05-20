@@ -1,12 +1,25 @@
 {
   "name": "@tsingwoong/clock-doctor-linux-arm-gnueabihf",
-  "version": "1.0.1",
-  "os": ["linux"],
-  "cpu": ["arm"],
+  "version": "1.0.2",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm"
+  ],
   "main": "clock-doctor.linux-arm-gnueabihf.node",
-  "files": ["clock-doctor.linux-arm-gnueabihf.node"],
+  "files": [
+    "clock-doctor.linux-arm-gnueabihf.node"
+  ],
   "description": "Template project for writing node package with napi-rs",
-  "keywords": ["napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
+  "keywords": [
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "node-addon",
+    "node-addon-api"
+  ],
   "license": "MIT",
   "engines": {
     "node": ">= 10"

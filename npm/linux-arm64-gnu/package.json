@@ -15,6 +15,6 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "git@github.com:napi-rs/tsingwong/clock-doctor.git",
+  "repository": "git@github.com:tsingwong/clock-doctor.git",
   "libc": ["glibc"]
 }

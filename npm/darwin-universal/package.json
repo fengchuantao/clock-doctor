@@ -1,25 +1,12 @@
 {
-  "name": "@tsingwoong/clock-doctor-freebsd-x64",
+  "name": "@tsingwoong/clock-doctor-darwin-universal",
   "version": "1.0.2",
-  "os": [
-    "freebsd"
-  ],
-  "cpu": [
-    "x64"
-  ],
-  "main": "clock-doctor.freebsd-x64.node",
-  "files": [
-    "clock-doctor.freebsd-x64.node"
-  ],
+  "os": ["darwin"],
+  "cpu": ["arm64"],
+  "main": "clock-doctor.darwin-universal.node",
+  "files": ["clock-doctor.darwin-universal.node"],
   "description": "Template project for writing node package with napi-rs",
-  "keywords": [
-    "napi-rs",
-    "NAPI",
-    "N-API",
-    "Rust",
-    "node-addon",
-    "node-addon-api"
-  ],
+  "keywords": ["napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
   "license": "MIT",
   "engines": {
     "node": ">= 10"

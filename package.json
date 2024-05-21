@@ -5,33 +5,19 @@
   "main": "index.js",
   "repository": "git@github.com:tsingwong/clock-doctor.git",
   "license": "MIT",
-  "keywords": [
-    "napi-rs",
-    "NAPI",
-    "N-API",
-    "Rust",
-    "node-addon",
-    "node-addon-api"
-  ],
-  "files": [
-    "index.d.ts",
-    "index.js"
-  ],
+  "keywords": ["napi-rs", "NAPI", "N-API", "Rust", "node-addon", "node-addon-api"],
+  "files": ["index.d.ts", "index.js"],
   "napi": {
     "name": "clock-doctor",
     "triples": {
-      "defaults": true,
+      "defaults": false,
       "additional": [
-        "x86_64-unknown-linux-musl",
-        "aarch64-unknown-linux-gnu",
-        "i686-pc-windows-msvc",
-        "armv7-unknown-linux-gnueabihf",
+        "x86_64-apple-darwin",
         "aarch64-apple-darwin",
-        "aarch64-linux-android",
-        "x86_64-unknown-freebsd",
-        "aarch64-unknown-linux-musl",
-        "aarch64-pc-windows-msvc",
-        "armv7-linux-androideabi"
+        "universal-apple-darwin",
+        "x86_64-pc-windows-msvc",
+        "i686-pc-windows-msvc",
+        "aarch64-pc-windows-msvc"
       ]
     }
   },
@@ -77,23 +63,13 @@
     "typescript": "^5.2.2"
   },
   "lint-staged": {
-    "*.@(js|ts|tsx)": [
-      "eslint -c .eslintrc.yml --fix"
-    ],
-    "*.@(js|ts|tsx|yml|yaml|md|json)": [
-      "prettier --write"
-    ],
-    "*.toml": [
-      "taplo format"
-    ]
+    "*.@(js|ts|tsx)": ["eslint -c .eslintrc.yml --fix"],
+    "*.@(js|ts|tsx|yml|yaml|md|json)": ["prettier --write"],
+    "*.toml": ["taplo format"]
   },
   "ava": {
-    "require": [
-      "@swc-node/register"
-    ],
-    "extensions": [
-      "ts"
-    ],
+    "require": ["@swc-node/register"],
+    "extensions": ["ts"],
     "timeout": "2m",
     "workerThreads": false,
     "environmentVariables": {

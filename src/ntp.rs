@@ -43,7 +43,7 @@ pub fn check_time() -> Result<f64, std::io::Error> {
 
   for &server in servers.iter() {
     print!("{} =>", server);
-    let calc = ntp_roundtrip(&server, NTP_PORT);
+    let calc = ntp_roundtrip(server, NTP_PORT);
     match calc {
       Ok(time) => {
         let microseconds = sntpc::fraction_to_microseconds(time.sec_fraction());

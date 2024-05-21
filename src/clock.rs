@@ -1,5 +1,4 @@
 #[cfg(not(windows))]
-use libc;
 
 use chrono::{DateTime, Local, TimeZone};
 pub(crate) struct Clock;
@@ -60,7 +59,7 @@ impl Clock {
   }
 
   #[cfg(not(windows))]
-  pub fn set<Tz: TimeZone>(t: DateTime<Tz>) -> () {
+  pub fn set<Tz: TimeZone>(t: DateTime<Tz>) {
     use std::mem::zeroed;
 
     use libc::{settimeofday, timezone};

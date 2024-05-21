@@ -1,5 +1,4 @@
 #[cfg(not(windows))]
-
 use chrono::{DateTime, Local, TimeZone};
 pub(crate) struct Clock;
 

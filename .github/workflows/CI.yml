@@ -32,10 +32,6 @@ jobs:
           - host: macos-latest
             target: x86_64-apple-darwin
             build: yarn build --target x86_64-apple-darwin
-          # 构建 mac ARM 芯片产物
-          - host: macos-latest
-            target: aarch64-apple-darwin
-            build: yarn build --target aarch64-apple-darwin
           # 构建 windows 64位 intel 芯片产物
           - host: windows-latest
             build: yarn build --target x86_64-pc-windows-msvc
@@ -46,6 +42,10 @@ jobs:
               yarn build --target i686-pc-windows-msvc
               yarn test
             target: i686-pc-windows-msvc
+          # 构建 mac ARM 芯片产物
+          - host: macos-latest
+            target: aarch64-apple-darwin
+            build: yarn build --target aarch64-apple-darwin
           # 构建 windows ARM 芯片产物
           - host: windows-latest
             target: aarch64-pc-windows-msvc

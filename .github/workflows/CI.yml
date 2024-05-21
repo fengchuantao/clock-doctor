@@ -136,11 +136,11 @@ jobs:
           name: bindings-aarch64-apple-darwin
           path: ${{ env.APP_NAME }}.darwin-arm64.node
       - name: Combine binaries
-        run: yarn napi universal
+        run: yarn napi universal -d ./
       - name: Upload artifact
         uses: actions/upload-artifact@v4
         with:
-          name: bindings-${{ env.APP_NAME }}.darwin-universal.node
+          name: bindings-universal-apple-darwin
           path: ${{ env.APP_NAME }}.*.node
           if-no-files-found: error
   test-macOS-windows-binding:

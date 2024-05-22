@@ -5,7 +5,8 @@
     "win32"
   ],
   "cpu": [
-    "arm64"
+    "arm64",
+    "ia32"
   ],
   "main": "clock-doctor.win32-arm64-msvc.node",
   "files": [

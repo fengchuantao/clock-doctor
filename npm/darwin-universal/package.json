@@ -5,7 +5,8 @@
     "darwin"
   ],
   "cpu": [
-    "arm64"
+    "arm64",
+    "x64"
   ],
   "main": "clock-doctor.darwin-universal.node",
   "files": [

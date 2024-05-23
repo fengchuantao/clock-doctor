@@ -18,7 +18,7 @@ import { cherckAndSet } from '@tsingwoong/clock-doctor'
 checkAndSet()
 ```
 
-Note: It's with auto install optionalDependencies with os and cpu.Just like `npm/darwin-universal/package.json`, it will be installed in Macs which `Intel` and `ARM`.
+Note: It's with auto install optionalDependencies with os and cpu.Just like `npm/darwin-universal/package.json`, it will be installed in Macs which of `Intel` architecture and `ARM` architecture.
 
 ## Support matrix
 

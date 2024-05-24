@@ -15,7 +15,15 @@ yarn add @tsingwoong/clock-doctor
 ```ts
 import { cherckAndSet } from '@tsingwoong/clock-doctor'
 
-checkAndSet()
+const res = checkAndSet();
+
+console.log(res);
+// {
+//   beforeSetTime: '2024-05-23 20:02:22.929925 +08:00',
+//   afterSetTime: '2024-05-23 20:02:27.478691 +08:00',
+//   errNo: 35,
+//   errMsg: 'Resource temporarily unavailable (os error 35)'
+// }
 ```
 
 Note: It's with auto install optionalDependencies with os and cpu.Just like `npm/darwin-universal/package.json`, it will be installed in Macs which of `Intel` architecture and `ARM` architecture.

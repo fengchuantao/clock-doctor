@@ -62,7 +62,7 @@ fn main() {
       None => (),
     }
   } else if action == "check-ntp" {
-    let offset = check_time().unwrap() as isize;
+    let offset = check_time().unwrap() as i64;
 
     let adjust_ms = ChronoDuration::milliseconds(offset as i64);
 

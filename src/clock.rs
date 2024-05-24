@@ -69,12 +69,9 @@ impl Clock {
     u.tv_sec = t.timestamp() as time_t;
     u.tv_usec = t.timestamp_subsec_micros() as suseconds_t;
 
-    let result = unsafe {
+    unsafe {
       let mock_tz: *const timezone = std::ptr::null();
       settimeofday(&u as *const timeval, mock_tz)
     };
-    if result != 0 {
-      println!("Failed to set system time");
-    }
   }
 }

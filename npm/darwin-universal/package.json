@@ -1,6 +1,6 @@
 {
   "name": "@tsingwoong/clock-doctor-darwin-universal",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "os": [
     "darwin"
   ],

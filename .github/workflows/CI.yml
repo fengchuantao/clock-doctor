@@ -39,7 +39,7 @@ jobs:
             build: yarn build --target x86_64-pc-windows-msvc
             target: x86_64-pc-windows-msvc
           # 构建 windows 32位 intel 芯片产物
-          - host: windows-latest
+          - host: windows-2019
             architecture: x86
             build: yarn build --target i686-pc-windows-msvc
             target: i686-pc-windows-msvc
@@ -62,6 +62,7 @@ jobs:
         with:
           node-version: 20
           architecture: ${{ matrix.settings.architecture }}
+          cache: yarn
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         with:
@@ -86,9 +87,7 @@ jobs:
       #   run: yarn config set supportedArchitectures.cpu "ia32"
       #   shell: bash
       - name: Install dependencies
-        run: |
-          corepack enable
-          yarn install
+        run: yarn install
       - name: Build
         run: ${{ matrix.settings.build }}
         shell: bash

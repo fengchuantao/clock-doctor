@@ -59,6 +59,7 @@ jobs:
         if: ${{ !matrix.settings.docker }}
         with:
           node-version: 20
+          architecture: 'x86'
           cache: yarn
       - name: Install
         uses: dtolnay/rust-toolchain@stable

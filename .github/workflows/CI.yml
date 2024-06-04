@@ -39,10 +39,11 @@ jobs:
             build: yarn build --target x86_64-pc-windows-msvc
             target: x86_64-pc-windows-msvc
           # 构建 windows 32位 intel 芯片产物
-          - host: windows-2019
-            architecture: x86
-            build: yarn build --target i686-pc-windows-msvc
-            target: i686-pc-windows-msvc
+          # 有 bug 现不构建了 https://github.com/yarnpkg/berry/issues/3972
+          # - host: windows-2019
+          #   architecture: x86
+          #   build: yarn build --target i686-pc-windows-msvc
+          #   target: i686-pc-windows-msvc
           # 构建 mac ARM 芯片产物
           - host: macos-latest
             architecture: x64

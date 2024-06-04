@@ -62,7 +62,6 @@ jobs:
         with:
           node-version: 20
           architecture: ${{ matrix.settings.architecture }}
-          cache: yarn
       - name: Install
         uses: dtolnay/rust-toolchain@stable
         with:
@@ -87,7 +86,9 @@ jobs:
       #   run: yarn config set supportedArchitectures.cpu "ia32"
       #   shell: bash
       - name: Install dependencies
-        run: yarn install
+        run: |
+          corepack enable
+          yarn install
       - name: Build
         run: ${{ matrix.settings.build }}
         shell: bash
